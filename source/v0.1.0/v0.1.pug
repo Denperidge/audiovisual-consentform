@@ -1,0 +1,18 @@
+---
+layout: base/base.pug
+permalink: "| 0.1.0/"
+---
+
+include /base/mixins
+            
+h2 Intro &amp; clarifications
+p.
+    This consent form has been given to you due to your or appearance in the attached media,
+    where you are possibly recognisable, visually or audibly. You will be referred to as #[em you].
+    The person or organisation that presented you this form and/or manages the uploaded media, will be referred to as the host.
+        
+
++fieldset("Changes you want to make …")
+    include /changes-obfuscate
++fieldset("… when you want them made")
+    include /when-on

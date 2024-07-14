@@ -1,0 +1,22 @@
+mixin inputTemp(inputType, name, value, labeltext, labelBefore)
+    if labelBefore
+        label(for=`${name}-${value}`)=labeltext
+    input(type=inputType name=name value=value id=`${name}-${value}`)
+    if !labelBefore
+        label(for=`${name}-${value}`)=labeltext
+    br
+
+mixin checkbox(name, value, labeltext)
+    p meow
+    
+mixin textarea(name, value, labeltext)
+    inputTemp("unused", name, value, labeltext, true)
+        textarea(name=name id=`${name}-${value}`)
+
+
+mixin fieldset(title)
+    fieldset
+        summary
+            h2=title
+        if block
+            block
